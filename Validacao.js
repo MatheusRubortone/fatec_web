@@ -1,17 +1,21 @@
+function alerta (message) {
+	$('#alertPlaceholder').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">'+message+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>')
+}
+
 function ValidaLogin() {
 	var login = document.getElementById("email");
 	var senha = document.getElementById("senha");
 
 	//Valida Email
 	if (login.value == "" || login.value.indexOf("@") < 1 || login.value.indexOf(".") < 1) {
-		alert("O campo Email deve ser prenchido corretamente!");
+		alerta("Email Inválido.");
 		login.focus();
 		return false;
 	}
 
 	//Valida Senha
 	if (senha.value == "") {
-		alert("O campo Senha deve ser prenchido!");
+		alerta("Insira sua senha.");
 		senha.focus();
 		return false;
 	}
@@ -71,8 +75,7 @@ function ValidaCadastro() {
 	//Valida CPF
 	if(cpf.value.length != 11){
 		alert("Digite um CPF válido!");
-		cpf.focus();
-		return false;
+		cpf.focus();s
 	}
 
 	//Valida Email
