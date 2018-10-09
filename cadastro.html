@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="Validacao.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-3 hide" id="menucol">
+                <div id="headmenu">
+                    <p style="font-family: 'Montserrat'">Menu</p>
+                </div>
+                <div id="menu">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="lista.html">Lista</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="login.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="info">
+                    <p id="infot" style="font-family: 'Montserrat'">Info</p>
+                    <div id="painel">
+                        <span id="lista">
+                            <b style="font-family: 'Montserrat'">Clientes</b>
+                            <img src="assets\svg\si-glyph-triangle-down.svg" id="down" style="width: 5%;" />
+                            <img id="up" src="assets\svg\si-glyph-triangle-up.svg" style="width: 5%;" />
+                        </span>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="font-family: 'Montserrat'">Ativos: 10</li>
+                            <li class="list-group-item" style="font-family: 'Montserrat'">Inativos: 3</li>
+                            <li class="list-group-item" style="font-family: 'Montserrat'">Total: 13</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-9" id="maincol">
+
+                <div id="barranav">
+                    <img src="assets\svg\si-glyph-arrow-thick-thin-down.svg" id="menudown" style="width: 40px;" />
+                    <img src="assets\svg\si-glyph-arrow-thick-thin-up.svg" id="menuup" style="width: 40px;" />
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            <a href="lista.html">Lista</a>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <a href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <a href="login.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="titulopag">
+                    <h1 style="font-family: 'Montserrat'">Cadastrar Cliente</h1>
+                </div>
+
+                <div id="conteudo">
+                    <div id="areaformulario">
+                        <br><br>
+                        <form action="lista.html" onsubmit="return ValidaCadastro()">
+
+                            <input type="number" class="form-control" id="codigo" placeholder="Código" onkeypress="return somenteNumeros(event)">
+                            <br>
+                            <!-- <label for="tipoRequerente">Tipo do Requerente</label> -->
+                            <input type="text" class="form-control" id="nome" placeholder="Nome">
+                            <br>
+                            <!-- <label for="cpf">CPF</label> -->
+                            <input type="number" class="form-control" id="cpf" placeholder="CPF"  onkeypress="return somenteNumeros(event)">
+                            <input type="email" class="form-control" id="emailcad" placeholder="Email">
+                            <br>
+                            <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                            <!-- <label for="cep">CEP</label> -->
+                            <input type="text" class="form-control" id="cep" placeholder="CEP" onkeypress="return somenteNumeros(event)">
+                            <!-- <label for="uf" id="lbluf">UF</label> -->
+                            <select class="form-control" id="uf">
+                                <option value="" disabled selected>UF</option>
+                                <option>AC</option>
+                                <option>AL</option>
+                                <option>AM</option>
+                                <option>AP</option>
+                                <option>BA</option>
+                                <option>CE</option>
+                                <option>DF</option>
+                                <option>ES</option>
+                                <option>GO</option>
+                                <option>MA</option>
+                                <option>MG</option>
+                                <option>MS</option>
+                                <option>MT</option>
+                                <option>PA</option>
+                                <option>PB</option>
+                                <option>PE</option>
+                                <option>PI</option>
+                                <option>PE</option>
+                                <option>PR</option>
+                                <option>RJ</option>
+                                <option>RN</option>
+                                <option>RO</option>
+                                <option>RR</option>
+                                <option>RS</option>
+                                <option>SC</option>
+                                <option>SE</option>
+                                <option>SP</option>
+                                <option>TO</option>
+                            </select>
+                            <!-- <label for="municipio" id="lbl">Município</label> -->
+                            <select class="form-control" id="municipio">
+                                <option value="" disabled selected>Cidade</option>
+                                <option>Cidade 1</option>
+                                <option>Cidade 2</option>
+                                <option>Cidade 3</option>
+                                <option>Cidade 4</option>
+                            </select>
+                            <br>
+                            <input type="text" class="form-control" id="fone1" placeholder="Tel. Celular *"  onkeypress="return somenteNumeros(event)">
+                            <input type="text" class="form-control" id="fone2" placeholder="Tel. Residencial"  onkeypress="return somenteNumeros(event)">
+                            <span id="tituloradio">Ativo:</span>
+                            <div id="radio">
+                                <input type="radio" class="radio" name="x" value="y" id="radioSim" checked/>
+                                <label for="y">Sim</label>
+                                <input type="radio" class="radio" name="x" value="z" id="radioNao" />
+                                <label for="z">Não</label>
+                            </div>
+
+                            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col hide"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

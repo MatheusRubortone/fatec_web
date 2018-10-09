@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nova Conta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="Validacao.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 hide" id="menucol">
+
+            </div>
+            <div class="col-8" id="maincol">
+
+                <h1 style="font-family: 'Montserrat'">Nova Conta</h1>
+
+                <div id="conteudo">
+                    <div id="areaformulario">
+                        <form action="lista.html" onsubmit="return ValidaCadastro()">
+                            <br>
+                            <!-- <label for="tipoRequerente">Tipo do Requerente</label> -->
+                            <input type="text" class="form-control" id="nome" placeholder="Nome">
+                            <br>
+                            <!-- <label for="cpf">CPF</label> -->
+                            <input type="text" class="form-control" id="cpf" placeholder="CPF">
+                            <input type="email" class="form-control" id="emailcad" placeholder="Email">
+                            <br>
+                            <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                            <!-- <label for="cep">CEP</label> -->
+                            <input type="text" class="form-control" id="cep" placeholder="CEP">
+                            <!-- <label for="uf" id="lbluf">UF</label> -->
+                            <select class="form-control" id="uf">
+                                <option value="" disabled selected>UF</option>
+                                <option>AC</option>
+                                <option>AL</option>
+                                <option>AM</option>
+                                <option>AP</option>
+                                <option>BA</option>
+                                <option>CE</option>
+                                <option>DF</option>
+                                <option>ES</option>
+                                <option>GO</option>
+                                <option>MA</option>
+                                <option>MG</option>
+                                <option>MS</option>
+                                <option>MT</option>
+                                <option>PA</option>
+                                <option>PB</option>
+                                <option>PE</option>
+                                <option>PI</option>
+                                <option>PE</option>
+                                <option>PR</option>
+                                <option>RJ</option>
+                                <option>RN</option>
+                                <option>RO</option>
+                                <option>RR</option>
+                                <option>RS</option>
+                                <option>SC</option>
+                                <option>SE</option>
+                                <option>SP</option>
+                                <option>TO</option>
+                            </select>
+                            <!-- <label for="municipio" id="lbl">Município</label> -->
+                            <select class="form-control" id="municipio">
+                                    <option value="" disabled selected>Cidade</option>
+                                    <option>Cidade 1</option>
+                                    <option>Cidade 2</option>
+                                    <option>Cidade 3</option>
+                                    <option>Cidade 4</option>
+                            </select>
+                            <br>
+                            <input type="text" class="form-control" id="fone1" placeholder="Tel. Celular *">
+                            <input type="text" class="form-control" id="fone2" placeholder="Tel. Residencial">
+                            <input type="text" class="form-control" id="senhacad" placeholder="Senha (Min. 6)">
+                            <input type="text" class="form-control" id="senha2" placeholder="Repita a Senha">
+                            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col hide"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

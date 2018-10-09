@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="Validacao.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 hide" id="menucol">
+                <div id="headmenu">
+                    <p style="font-family: 'Montserrat'">Menu</p>
+                </div>
+                <div id="menu">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="lista.html">Lista</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="login.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="info">
+                    <p id="infot" style="font-family: 'Montserrat'">Info</p>
+                    <div id="painel">
+                        <span id="lista">
+                            <b style="font-family: 'Montserrat'">Clientes</b>
+                            <img src="assets\svg\si-glyph-triangle-down.svg" id="down" style="width: 5%;" />
+                            <img id="up" src="assets\svg\si-glyph-triangle-up.svg" style="width: 5%;" />
+                        </span>
+                        <ul class="list-group list-group-flush" >
+                            <li class="list-group-item" style="font-family: 'Montserrat'">Ativos: 17</li>
+                            <li class="list-group-item" style="font-family: 'Montserrat'">Inativos: 3</li>
+                            <li class="list-group-item" style="font-family: 'Montserrat'">Total: 20</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-9" id="maincol">
+
+                <div id="barranav">
+                    <img src="assets\svg\si-glyph-arrow-thick-thin-down.svg" id="menudown" style="width: 40px;" />
+                    <img src="assets\svg\si-glyph-arrow-thick-thin-up.svg" id="menuup" style="width: 40px;" />
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            <a href="lista.html">Lista</a>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <a href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <a href="login.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="titulopag">
+                        <h1 style="font-family: 'Montserrat'">Lista de Clientes</h1>                
+                </div>    
+                    
+                <div id="conteudo">
+                    <div id="tabela">
+                        <table bgcolor="#00FF00" class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" >Id</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Telefone</th>
+                                    <th scope="col">CPF</th>
+                                    <th scope="col">Ativo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="corpolista"></tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="addcliente" onclick="window.location='cadastro.html'">+ Cliente</button>
+                </div>
+            </div>
+            <!-- <div class="col hide"></div> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
